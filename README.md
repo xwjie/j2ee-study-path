@@ -24,7 +24,7 @@
 - 初级
   - 学习List/Map
     - [如何学习](basic-data-structure/how-to-study.md)
-    - ArrayList/LinkedList/HashMap/LinkedHashMap/TreeMap 的使用
+    - [ArrayList/LinkedList/HashMap/LinkedHashMap/TreeMap 的使用](basic-data-structure/list-map.md)
       - hashcode的作用
   - Collections工具库使用
   - 序列化的概念和transient关键字
@@ -46,7 +46,7 @@
 
 - 初级
   - 理解oop的思想
-  - 实现List
+  - [实现List](basic-data-structure/implement-list.md)
   - 实现二叉树
   - 二叉树遍历
     - 使用递归和循环实现各种遍历
