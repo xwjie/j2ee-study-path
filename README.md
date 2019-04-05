@@ -24,7 +24,7 @@
 - 初级
   - 学习List/Map
     - [如何学习](basic-data-structure/how-to-study.md)
-    - [ArrayList/LinkedList/HashMap/LinkedHashMap/TreeMap 的使用](basic-data-structure/list-map.md)
+    - [ArrayList/LinkedList/HashMap/LinkedHashMap/TreeMap 和 Set 的使用](basic-data-structure/list-map.md)
       - hashcode的作用
   - Collections工具库使用
   - 序列化的概念和transient关键字
