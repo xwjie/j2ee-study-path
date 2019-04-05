@@ -38,6 +38,7 @@ public class MyLinkedListTest {
         System.out.println(list);
 
         list.add(null);
+        list.add("666");
 
         System.out.println(list.size());
         System.out.println(list);

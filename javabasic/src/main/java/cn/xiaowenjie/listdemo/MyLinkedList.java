@@ -69,7 +69,7 @@ public class MyLinkedList<E> implements IList<E> {
                 if (current.next != null) {
                     current.next.pre = current.pre;
                 } else {
-                    this.tail = current;
+                    this.tail = current.pre;
                 }
 
                 this.size--;
