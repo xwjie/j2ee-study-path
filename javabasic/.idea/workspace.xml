@@ -12,19 +12,10 @@
   <component name="FileEditorManager">
     <leaf>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/cn/xiaowenjie/App.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="57">
-              <caret line="3" column="15" lean-forward="true" selection-start-line="3" selection-start-column="15" selection-end-line="3" selection-end-column="15" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
         <entry file="jar://C:/Program Files/Java/jdk1.8.0_201/src.zip!/java/util/ArrayList.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="214">
-              <caret line="103" column="15" lean-forward="true" selection-start-line="103" selection-start-column="15" selection-end-line="103" selection-end-column="15" />
+            <state relative-caret-position="1463">
+              <caret line="103" column="15" selection-start-line="103" selection-start-column="15" selection-end-line="103" selection-end-column="15" />
               <folding>
                 <element signature="e#30670#30671#0" expanded="true" />
                 <element signature="e#30707#30708#0" expanded="true" />
@@ -38,10 +29,55 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/cn/xiaowenjie/listdemo/IList.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="38">
+              <caret line="2" selection-start-line="2" selection-end-line="10" selection-end-column="1" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/cn/xiaowenjie/listdemo/MyLinkedList.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-132">
+              <caret line="24" selection-start-line="24" selection-end-line="24" />
+              <folding>
+                <element signature="e#249#250#0" expanded="true" />
+                <element signature="e#367#368#0" expanded="true" />
+                <element signature="e#1922#1923#0" expanded="true" />
+                <element signature="e#2777#2778#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/test/java/cn/xiaowenjie/listdemo/MyLinkedListTest.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="157">
+              <caret line="43" lean-forward="true" selection-start-line="43" selection-end-line="43" />
+              <folding>
+                <element signature="e#164#172#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="jar://C:/Program Files/Java/jdk1.8.0_201/src.zip!/java/util/List.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="171">
+              <caret line="584" column="9" selection-start-line="584" selection-start-column="9" selection-end-line="584" selection-end-column="9" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
         <entry file="jar://C:/Program Files/Java/jdk1.8.0_201/src.zip!/java/util/HashMap.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="247">
-              <caret line="1202" column="16" lean-forward="true" selection-start-line="1202" selection-start-column="16" selection-end-line="1202" selection-end-column="16" />
+              <caret line="1202" column="16" selection-start-line="1202" selection-start-column="16" selection-end-line="1202" selection-end-column="16" />
               <folding>
                 <element signature="e#42126#42127#0" expanded="true" />
                 <element signature="e#42190#42191#0" expanded="true" />
@@ -56,7 +92,7 @@
         <entry file="jar://C:/Program Files/Java/jdk1.8.0_201/src.zip!/java/util/LinkedHashMap.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="217">
-              <caret line="164" column="23" lean-forward="true" selection-start-line="164" selection-start-column="23" selection-end-line="164" selection-end-column="23" />
+              <caret line="164" column="23" selection-start-line="164" selection-start-column="23" selection-end-line="164" selection-end-column="23" />
             </state>
           </provider>
         </entry>
@@ -65,7 +101,7 @@
         <entry file="jar://C:/Program Files/Java/jdk1.8.0_201/src.zip!/java/util/LinkedHashSet.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="285">
-              <caret line="116" lean-forward="true" selection-start-line="116" selection-end-line="116" />
+              <caret line="116" selection-start-line="116" selection-end-line="116" />
               <folding>
                 <element signature="e#5516#5517#0" expanded="true" />
                 <element signature="e#5572#5573#0" expanded="true" />
@@ -78,11 +114,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="jar://C:/Program Files/Java/jdk1.8.0_201/src.zip!/java/util/TreeSet.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="228">
-              <caret line="35" column="2" lean-forward="true" selection-start-line="35" selection-start-column="2" selection-end-line="35" selection-end-column="2" />
+            <state relative-caret-position="152">
+              <caret line="31" column="48" selection-start-line="31" selection-start-column="48" selection-end-line="31" selection-end-column="48" />
             </state>
           </provider>
         </entry>
@@ -100,21 +136,31 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/test/java/cn/xiaowenjie/AppTest.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="133">
-              <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
-            </state>
-          </provider>
-        </entry>
-      </file>
     </leaf>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Interface" />
+        <option value="Class" />
+      </list>
+    </option>
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
       <find>LinkedHash</find>
     </findStrings>
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/src/main/java/cn/xiaowenjie/listdemo/IList.java" />
+        <option value="$PROJECT_DIR$/src/main/java/cn/xiaowenjie/listdemo/MyList.java" />
+        <option value="$PROJECT_DIR$/src/test/java/cn/xiaowenjie/MyLinkedListTest.java" />
+        <option value="$PROJECT_DIR$/src/test/java/cn/xiaowenjie/listdemo/MyLinkedListTest.java" />
+        <option value="$PROJECT_DIR$/src/main/java/cn/xiaowenjie/listdemo/MyLinkedList.java" />
+      </list>
+    </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="375" />
@@ -139,6 +185,12 @@
               <item name="javabasic" type="616d4139:PackageViewModuleNode" />
               <item name="cn.xiaowenjie" type="1f31426a:PackageElementNode" />
             </path>
+            <path>
+              <item name="javabasic" type="58d84e3e:PackageViewProjectNode" />
+              <item name="javabasic" type="616d4139:PackageViewModuleNode" />
+              <item name="cn.xiaowenjie" type="1f31426a:PackageElementNode" />
+              <item name="listdemo" type="1f31426a:PackageElementNode" />
+            </path>
           </expand>
           <select />
         </subPane>
@@ -150,7 +202,8 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1554471246635" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1554476375999" />
+    <property name="last_directory_selection" value="$PROJECT_DIR$/src/test/java/cn/xiaowenjie" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
   </component>
@@ -166,6 +219,26 @@
       </list>
     </option>
   </component>
+  <component name="RunManager">
+    <configuration name="MyLinkedListTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="cn.xiaowenjie.listdemo.MyLinkedListTest" />
+      <module name="javabasic" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="cn.xiaowenjie.listdemo.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.MyLinkedListTest" />
+      </list>
+    </recent_temporary>
+  </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
       <changelist id="51190803-5c68-4cad-b5a1-022cc63a343b" name="Default Changelist" comment="" />
@@ -173,12 +246,12 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1554467726235</updated>
-      <workItem from="1554467729730" duration="2738000" />
+      <workItem from="1554467729730" duration="6868000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="2738000" />
+    <option name="totallyTimeSpent" value="6868000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1295" height="695" extended-state="6" />
@@ -189,15 +262,16 @@
       <window_info id="Capture Tool" order="2" />
       <window_info id="Favorites" order="3" side_tool="true" />
       <window_info content_ui="combo" id="Project" order="4" sideWeight="0.49822694" visible="true" weight="0.2497979" />
+      <window_info anchor="bottom" id="Messages" weight="0.32978722" />
       <window_info anchor="bottom" id="Docker" show_stripe_button="false" />
       <window_info anchor="bottom" id="Database Changes" />
       <window_info anchor="bottom" id="Version Control" />
-      <window_info anchor="bottom" id="Terminal" />
+      <window_info anchor="bottom" id="Terminal" weight="0.32978722" />
       <window_info anchor="bottom" id="Event Log" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.35283688" />
+      <window_info active="true" anchor="bottom" id="Debug" order="3" visible="true" weight="0.48049647" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
@@ -209,11 +283,18 @@
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="5" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="6" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="7" weight="0.25" />
-      <window_info anchor="right" x="933" y="28" width="309" height="655" id="Structure" order="8" sideWeight="0.50177306" side_tool="true" type="FLOATING" weight="0.2497979" />
+      <window_info anchor="right" x="933" y="28" width="309" height="655" id="Structure" order="8" sideWeight="0.50177306" side_tool="true" type="FLOATING" visible="true" weight="0.2497979" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
+  </component>
+  <component name="XDebuggerManager">
+    <watches-manager>
+      <configuration name="Application">
+        <watch expression="list.head" />
+      </configuration>
+    </watches-manager>
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/src/test/java/cn/xiaowenjie/AppTest.java">
@@ -230,25 +311,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_201/src.zip!/java/util/ArrayList.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="214">
-          <caret line="103" column="15" lean-forward="true" selection-start-line="103" selection-start-column="15" selection-end-line="103" selection-end-column="15" />
-          <folding>
-            <element signature="e#30670#30671#0" expanded="true" />
-            <element signature="e#30707#30708#0" expanded="true" />
-            <element signature="e#31007#31008#0" expanded="true" />
-            <element signature="e#31039#31040#0" expanded="true" />
-            <element signature="e#46731#46732#0" expanded="true" />
-            <element signature="e#46796#46797#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://C:/Program Files/Java/jdk1.8.0_201/src.zip!/java/util/HashMap.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="247">
-          <caret line="1202" column="16" lean-forward="true" selection-start-line="1202" selection-start-column="16" selection-end-line="1202" selection-end-column="16" />
+          <caret line="1202" column="16" selection-start-line="1202" selection-start-column="16" selection-end-line="1202" selection-end-column="16" />
           <folding>
             <element signature="e#42126#42127#0" expanded="true" />
             <element signature="e#42190#42191#0" expanded="true" />
@@ -261,7 +327,7 @@
     <entry file="jar://C:/Program Files/Java/jdk1.8.0_201/src.zip!/java/util/LinkedHashMap.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="217">
-          <caret line="164" column="23" lean-forward="true" selection-start-line="164" selection-start-column="23" selection-end-line="164" selection-end-column="23" />
+          <caret line="164" column="23" selection-start-line="164" selection-start-column="23" selection-end-line="164" selection-end-column="23" />
         </state>
       </provider>
     </entry>
@@ -279,7 +345,7 @@
     <entry file="jar://C:/Program Files/Java/jdk1.8.0_201/src.zip!/java/util/LinkedHashSet.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="285">
-          <caret line="116" lean-forward="true" selection-start-line="116" selection-end-line="116" />
+          <caret line="116" selection-start-line="116" selection-end-line="116" />
           <folding>
             <element signature="e#5516#5517#0" expanded="true" />
             <element signature="e#5572#5573#0" expanded="true" />
@@ -293,8 +359,60 @@
     </entry>
     <entry file="jar://C:/Program Files/Java/jdk1.8.0_201/src.zip!/java/util/TreeSet.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="228">
-          <caret line="35" column="2" lean-forward="true" selection-start-line="35" selection-start-column="2" selection-end-line="35" selection-end-column="2" />
+        <state relative-caret-position="152">
+          <caret line="31" column="48" selection-start-line="31" selection-start-column="48" selection-end-line="31" selection-end-column="48" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_201/src.zip!/java/util/ArrayList.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1463">
+          <caret line="103" column="15" selection-start-line="103" selection-start-column="15" selection-end-line="103" selection-end-column="15" />
+          <folding>
+            <element signature="e#30670#30671#0" expanded="true" />
+            <element signature="e#30707#30708#0" expanded="true" />
+            <element signature="e#31007#31008#0" expanded="true" />
+            <element signature="e#31039#31040#0" expanded="true" />
+            <element signature="e#46731#46732#0" expanded="true" />
+            <element signature="e#46796#46797#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_201/src.zip!/java/util/List.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="171">
+          <caret line="584" column="9" selection-start-line="584" selection-start-column="9" selection-end-line="584" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/cn/xiaowenjie/listdemo/IList.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="38">
+          <caret line="2" selection-start-line="2" selection-end-line="10" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/cn/xiaowenjie/listdemo/MyLinkedList.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-132">
+          <caret line="24" selection-start-line="24" selection-end-line="24" />
+          <folding>
+            <element signature="e#249#250#0" expanded="true" />
+            <element signature="e#367#368#0" expanded="true" />
+            <element signature="e#1922#1923#0" expanded="true" />
+            <element signature="e#2777#2778#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/cn/xiaowenjie/listdemo/MyLinkedListTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="157">
+          <caret line="43" lean-forward="true" selection-start-line="43" selection-end-line="43" />
+          <folding>
+            <element signature="e#164#172#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
