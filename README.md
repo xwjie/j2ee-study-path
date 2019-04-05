@@ -26,15 +26,18 @@
     - [如何学习](basic-data-structure/how-to-study.md)
     - [ArrayList/LinkedList/HashMap/LinkedHashMap/TreeMap 和 Set 的使用](basic-data-structure/list-map.md)
       - hashcode的作用
+      - equals方法
   - Collections工具库使用
   - 序列化的概念和transient关键字
   - 了解注解
 - 中级
+  - Queue/Deque
   - 了解 ArrayList/LinkedList/HashMap的实现原理
   - 了解 ConcurrentHashMap的实现原理
   - 查看java.util包
   - 反射/自省
   - 自定义注解
+  - 泛型使用和实现原理
 
 ## 编程能力
 
@@ -47,6 +50,7 @@
 - 初级
   - 理解oop的思想
   - [实现List](basic-data-structure/implement-list.md)
+    - 带泛型
   - 实现二叉树
   - 二叉树遍历
     - 使用递归和循环实现各种遍历
@@ -63,7 +67,11 @@
 
 - 初级
   - 线程（概念、方法和状态）
+    - 如何启动、停止线程
+    - 守护线程是什么
+    - 中断线程做了什么？那几个方法？
   - synchronize/wait/notify关键字
+    - synchronize能加在什么地方？
 - 中级
   - 线程池
   - 线程通信
@@ -72,6 +80,8 @@
   - ThreadLocal使用
 - 高级
   - JUC包
+  - 使用synchronize/wait/notify实现BlockingList
+  - JVM里面和synchronize相关知识
 
 ## JVM
 
@@ -172,7 +182,7 @@
 
 ## 工具使用
 
-工具使用都是初级知识，并没有难点。难点在其他地方。
+工具使用都是初级知识，并没有难点。
 
 - 初级
   - jdk自带工具使用
@@ -180,3 +190,11 @@
 - 中级
   - 压力测试工具使用
   - 内存分析工具使用
+
+## 第三方类库使用
+
+没啥好说的，用一次就够了。
+
+- Guava
+- Apache的common系列
+- Json库
