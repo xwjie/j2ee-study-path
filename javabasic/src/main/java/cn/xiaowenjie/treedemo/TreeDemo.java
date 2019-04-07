@@ -31,15 +31,15 @@ public class TreeDemo {
      * @param node
      */
     private static void middleWalk(TreeNode<Integer> node) {
-        if (node.left != null) {
-            middleWalk(node.left);
+        if (node == null) {
+            return;
         }
+
+        middleWalk(node.left);
 
         System.out.print(node.value + ",");
 
-        if (node.right != null) {
-            middleWalk(node.right);
-        }
+        middleWalk(node.right);
     }
 
     /**
