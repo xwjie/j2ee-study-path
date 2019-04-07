@@ -54,13 +54,13 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/cn/xiaowenjie/treedemo/TreeDemo.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="432">
-              <caret line="21" column="31" selection-start-line="21" selection-start-column="31" selection-end-line="21" selection-end-column="31" />
+            <state relative-caret-position="227">
+              <caret line="87" selection-start-line="87" selection-end-line="87" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#143#152#0" expanded="true" />
+                <element signature="e#238#247#0" expanded="true" />
                 <element signature="e#869#888#0" expanded="true" />
-                <element signature="e#1407#1426#0" expanded="true" />
+                <element signature="e#1637#1656#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -215,7 +215,7 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1554649563420" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1554650520813" />
     <property name="last_directory_selection" value="$PROJECT_DIR$/src/main/java/cn/xiaowenjie" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
@@ -278,12 +278,12 @@
       <option name="presentableId" value="Default" />
       <updated>1554467726235</updated>
       <workItem from="1554467729730" duration="8026000" />
-      <workItem from="1554647152933" duration="2373000" />
+      <workItem from="1554647152933" duration="3320000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="10399000" />
+    <option name="totallyTimeSpent" value="11346000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -324,7 +324,7 @@
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="5" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="6" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="7" weight="0.25" />
-      <window_info anchor="right" x="1317" y="103" width="562" height="884" id="Structure" order="8" sideWeight="0.50177306" side_tool="true" type="FLOATING" visible="true" weight="0.2497979" />
+      <window_info anchor="right" x="1528" y="103" width="351" height="884" id="Structure" order="8" sideWeight="0.50177306" side_tool="true" type="FLOATING" visible="true" weight="0.2497979" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -528,13 +528,13 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/cn/xiaowenjie/treedemo/TreeDemo.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="432">
-          <caret line="21" column="31" selection-start-line="21" selection-start-column="31" selection-end-line="21" selection-end-column="31" />
+        <state relative-caret-position="227">
+          <caret line="87" selection-start-line="87" selection-end-line="87" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#143#152#0" expanded="true" />
+            <element signature="e#238#247#0" expanded="true" />
             <element signature="e#869#888#0" expanded="true" />
-            <element signature="e#1407#1426#0" expanded="true" />
+            <element signature="e#1637#1656#0" expanded="true" />
           </folding>
         </state>
       </provider>
