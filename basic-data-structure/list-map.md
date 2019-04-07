@@ -8,7 +8,11 @@
 
 - 各种方法
 - ArrayList和LinkedList的特点、使用场景
+- while/for/iterator/listIterator遍历
 - 可以边修改边遍历的 ListIterator 
+- LinkedList是个Deque（双端队列），也有不少使用场景 [参考1](https://blog.csdn.net/ustcjackylau/article/details/42454779) 
+![](image/linkedlist-deque.png)
+- Vector
 
 ### Map
 
@@ -33,6 +37,23 @@ Set是使用Map实现的，和Map一一对应，只是Value是一个固定值而
 ```
 
 > LinkedHashSet 里面使用LinkedHashMap的方式比较特别。[参见这里](http://wiki.jikexueyuan.com/project/java-collection/linkedhashset.html)
+
+### Queue、Deque
+
+ArrayDeque/ LinkedList
+
+[参考](https://segmentfault.com/a/1190000016524796)
+
+### Stack
+
+`Stack` 是个类，继承于 `Vector`，而 `Queue`、`Deque` 是接口。
+
+![](image/stack.png)
+
+## 作业
+
+- 在list中随机增加N个数据，然后把符合条件的数据删除掉
+  - 分别使用while/listIterator实现
 
 ## 思考题
 

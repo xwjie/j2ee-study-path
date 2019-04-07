@@ -27,6 +27,7 @@
     - [ArrayList/LinkedList/HashMap/LinkedHashMap/TreeMap 和 Set 的使用](basic-data-structure/list-map.md)
       - hashcode的作用
       - equals方法
+      - LinkedList是个deque，双向队列
   - Collections工具库使用
   - 序列化的概念和transient关键字
   - 了解注解
