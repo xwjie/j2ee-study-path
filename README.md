@@ -55,8 +55,8 @@
     - 使用单链表，双链表，数组各实现一遍
   - [实现二叉树](basic-data-structure/implement-tree.md)
   - 二叉树遍历
-    - 使用递归和循环实现各种遍历
-    - 输入叶子节点得到完整路径
+    - [使用递归和循环实现各种遍历](basic-data-structure/implement-tree.md)
+    - [输入叶子节点得到完整路径](basic-data-structure/implement-tree-findleaf.md)
 - 中级
   - 了解常规算法
     - 动态规划
