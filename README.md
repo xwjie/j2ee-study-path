@@ -28,6 +28,7 @@
       - hashcode的作用
       - equals方法
       - LinkedList是个deque，双向队列
+  - [使用Map实现用户crud功能](javabasic\src\main\java\cn\xiaowenjie\mapdemo\UserControllerTest.java)
   - Collections工具库使用
   - 序列化的概念和transient关键字
   - 了解注解
