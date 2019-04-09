@@ -29,6 +29,9 @@
       - equals方法
       - LinkedList是个deque，双向队列
   - [使用Map实现用户crud功能](javabasic\src\main\java\cn\xiaowenjie\mapdemo\UserControllerTest.java)
+    - 思考：为什么使用LinkedHashMap？
+    - 思考: 每一个方法输入和输出怎么样最合理？
+    - 思考：怎么样用最少的代码实现？
   - Collections工具库使用
   - 序列化的概念和transient关键字
   - 了解注解
