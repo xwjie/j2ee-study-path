@@ -108,11 +108,12 @@
 ## j2ee 容器
 
 - 初级
-  - servlet容器
+  - [servlet容器](servlet/servlet-crud-demo1.md)
     - 编写filter/servlet处理请求
-      - 不使用数据库，直接用List/Map来处理数据
+      - 使用Map实现用户crud功能
     - 返回json数据
     - 模板返回试图数据
+    - Facade设计模式 
 - 中级
   - 实现登录功能
   - springmvc框架使用

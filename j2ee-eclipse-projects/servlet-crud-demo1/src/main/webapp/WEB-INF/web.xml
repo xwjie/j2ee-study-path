@@ -1,0 +1,22 @@
+<!DOCTYPE web-app PUBLIC
+ "-//Sun Microsystems, Inc.//DTD Web Application 2.3//EN"
+ "http://java.sun.com/dtd/web-app_2_3.dtd" >
+
+<web-app>
+  <display-name>Archetype Created Web Application</display-name>
+  <servlet>
+  	<servlet-name>CrudServlet</servlet-name>
+  	<display-name>CrudServlet</display-name>
+  	<description></description>
+  	<servlet-class>cn.xiaowenjie.CrudServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>CrudServlet</servlet-name>
+  	<url-pattern>/crud</url-pattern>
+  </servlet-mapping>
+  
+  <!-- 默认到我们的servlet -->
+  <welcome-file-list>
+ 	<welcome-file>crud</welcome-file> 
+  </welcome-file-list>
+</web-app>
