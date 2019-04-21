@@ -4,11 +4,6 @@
 
 [下载Eclipse IDE for Enterprise Java Developers](https://www.eclipse.org/downloads/packages/)
 
-## 安装uml插件
-
-
-[安装ModelGoon](https://www.jianshu.com/p/55513b5e500d)
-
 ## 目标
 
 - 理解servlet概念
