@@ -14,3 +14,12 @@
 - 学习rest测试工具的使用（这里使用chrome的restlet插件）
 - 学习视图（view）和模板的使用
 - servlet3 和 servlet2.5 区别
+
+## 知识点
+
+- javax.servlet.http.HttpServletRequest
+- javax.servlet.http.HttpServletResponse
+- javax.servlet.http.HttpServletRequestWrapper
+- javax.servlet.http.HttpServletResponseWrapper
+- org.apache.catalina.connector.RequestFacade
+- org.apache.catalina.connector.ResponseFacade

@@ -12,11 +12,11 @@
   </servlet>
   <servlet-mapping>
   	<servlet-name>CrudServlet</servlet-name>
-  	<url-pattern>/crud/*</url-pattern>
+  	<url-pattern>/crud</url-pattern>
   </servlet-mapping>
   
   <!-- 默认到我们的servlet -->
   <welcome-file-list>
- 	<welcome-file>index.jsp</welcome-file>
+ 	<welcome-file>crud</welcome-file> 
   </welcome-file-list>
 </web-app>

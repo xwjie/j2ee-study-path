@@ -3,10 +3,10 @@
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>cn.xiaowenjie</groupId>
-	<artifactId>servlet-crud-demo1</artifactId>
+	<artifactId>servlet-blank</artifactId>
 	<packaging>war</packaging>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>servlet-crud-demo1 Maven Webapp</name>
+	<name>servlet-blank Maven Webapp</name>
 	<url>http://maven.apache.org</url>
 	<dependencies>
 		<dependency>
@@ -23,8 +23,16 @@
 			<scope>provided</scope>
 		</dependency>
 
+		<!-- 分析request和response -->
+		<dependency>
+			<groupId>org.apache.tomcat</groupId>
+			<artifactId>tomcat-catalina</artifactId>
+			<version>8.5.40</version>
+		</dependency>
+
+
 	</dependencies>
 	<build>
-		<finalName>servlet-crud-demo1</finalName>
+		<finalName>servlet-blank</finalName>
 	</build>
 </project>

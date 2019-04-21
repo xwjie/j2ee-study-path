@@ -31,7 +31,7 @@
 
 最常见的配置是轮询和hash，hash里面又分为ip hash，url hash，指定header字段（如cookie某个字段）hash。
 
-> 经过4层交换后，由于ip都是4层交换的ip，使用ip hash的时候会出错，需要把用户真实的ip放在头上面，如`x-request-ip`, nginx上根据这个ip负载均衡。
+> 经过4层交换后，由于ip都是4层交换的ip，使用ip hash的时候会出错，需要把用户真实的ip放在头上面，如`x-request-ip`, nginx上根据这个ip负载均衡。这个时候配置就不是 `ip_hash` , 而是 `hash $request_x_request_ip`。
 
 - seesion 共享
 
@@ -50,6 +50,6 @@
 
 - cookie 代理问题
 
-反向代理的时候，cookie的代理是一个容易出错的地方，需要了解cookie的工作机制。
+反向代理的时候，cookie的代理是一个容易出错的地方（域名是代理前的域名，路径是代理前的路径），需要了解cookie的工作机制。
 
 [https://www.jianshu.com/p/aeed2a56a3eb](https://www.jianshu.com/p/aeed2a56a3eb)

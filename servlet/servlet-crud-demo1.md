@@ -1,173 +1,85 @@
-# 使用servlet进行基本开发
+# CRUD基本开发
 
-## 创建工程
+## 需求
 
-### 新建maven工程
+使用http对应的method实现CRUD。`Restful` 就是这样的。实际工作中不会这样用。
 
-新建maven工程， Archetype 里面选择 webapp 模板。
+- GET 方法，带id查询对应的数据，不带id查询所有数据
+- POST 方法，新建数据
+- DELETE 方法，删除数据
+- PUT方法，修改数据
 
-![](image/create-maven-1.png)
+## 实现步骤
 
-### 添加servlet
+- 定义数据结构
 
-在源代码目录新建serlet
+定义`User`对象，定义如下
 
-![create servlet](image/create-maven-2.png)
+| 字段名 | 含义 | 类型 |
+| :--: | :---: | :--:|
+| ID    | id  | int |
+| AGE   |年龄|  int|
+| NAME  | 名字 | String |
 
-> 图片里面的 `Source Folder` 是错的。应该是 `src\main\java`，如果没有，手工创建并刷新。
+- 定义接口
 
-下一步中，把url mapping修改一下，这就是你在url里面敲入访问的地址
+接口最重要的是输入输出，然后是正常异常场景。
 
-![url mapping](image/create-maven-3.png)
+## 编码实现
 
+先创建一个 `UserService` 类，把crud操作放里面，然后servlet里面是入口，调用里面的方法。
 
+Servlet 中增加对于的方法， doPut, doGet, doPost, doDelete 4个方法，然后获取参数，调用 UserService 方法，返回数据到前台。
 
-servlet 创建完毕
-
-### 增加依赖
-
-在 `pom.xml` 中增加servlet依赖
-
-在 `dependencies` 节点内，增加 `servlet-2.5` 的依赖
-
-```xml
-<dependency>
-    <groupId>javax.servlet</groupId>
-    <artifactId>servlet-api</artifactId>
-    <version>2.5</version>
-    <scope>provided</scope>
-</dependency>
-```
-
-### 测试工程
-
-在工程上点击右键，选择 `run as` ->  `run on server`， 选择对应的`tomcat`版本
-
-![](image/run-on-tomcat.png)
-
-接下来选择tomcat的目录和对应的jdk
-
-![](image/run-on-tomcat-2.png)
-
-点击Finnish。弹出的url中看到以下页面为成功
-
-![success](image/create-success.png)
-
-## 了解细节
-
-### servlet 配置
-
-新增了servlet后， 项目的 `webapp\WEB-INF\web.xml` 中新增了如下配置:
-
-```xml
-<web-app>
-  <display-name>Archetype Created Web Application</display-name>
-  <servlet>
-  	<servlet-name>CrudServlet</servlet-name>
-  	<display-name>CrudServlet</display-name>
-  	<description></description>
-  	<servlet-class>cn.xiaowenjie.CrudServlet</servlet-class>
-  </servlet>
-  <servlet-mapping>
-  	<servlet-name>CrudServlet</servlet-name>
-  	<url-pattern>/crud</url-pattern>
-  </servlet-mapping>
-</web-app>
-```
-
-可以看出，这里配置了servlet的名字，描述，对应的处理类，已经映射的url格式。其中 `url-pattern` 的配置是重点。
-
-仔细阅读，这里有很多坑。 [servlet的url-pattern匹配规则](https://www.cnblogs.com/canger/p/6084846.html)
-
-### servlet 简单工作机制了解
-
-上面我们看到的 `hello world`，并不是我们servlet返回的。而是 `index.jsp` 返回的。当我们没有带任何路径的时候，web app 应用会去读取存在的 `welcome-file-list` 配置。我们现在没有配置，他会有一个默认的列表。如果你想默认`index.html`, 或者默认是我们的 `servlet`。你可以增加对应的配置。
-
-如，我们把默认的页面设置为我们的`servlet`。我们的 `servlet` 的 `url mapping` 是 `/crud`。那么我们在 `web.xml` 增加配置
-
-```xml
-<web-app>
-  <display-name>Archetype Created Web Application</display-name>
-  <servlet>
-  	<servlet-name>CrudServlet</servlet-name>
-  	<display-name>CrudServlet</display-name>
-  	<description></description>
-  	<servlet-class>cn.xiaowenjie.CrudServlet</servlet-class>
-  </servlet>
-  <servlet-mapping>
-  	<servlet-name>CrudServlet</servlet-name>
-  	<url-pattern>/crud</url-pattern>
-  </servlet-mapping>
-  
-  <!-- 默认到我们的servlet -->
-  <welcome-file-list>
- 	<welcome-file>crud</welcome-file> 
-  </welcome-file-list>
-</web-app>
-```
-
-重新运行
-
-![](image/tomcat-server-restart.png)
-
-看到如下画面
-
-![](image/tomcat-server-2.png)
-
-
-和我们访问 `/crud` 结果是一样的。
-
-接下来，我们简单看看servlet的工作机制，打开刚刚的servlet代码
+### 创建数据
 
 ```java
-public class CrudServlet extends HttpServlet {
-	private static final long serialVersionUID = 1L;
+protected void doPost(HttpServletRequest request, HttpServletResponse response)
+        throws ServletException, IOException {
+    // POST方法里面调用getParameter方法
+    // 如果没有 Content-Type: application/x-www-form-urlencoded 参数必须在url上
+    // 如果有，参数在url或者body上都可以
+    // 实际上不太需要纠结这些细节，spring等框架封装好了
 
-	public CrudServlet() {
-	}
+    // FIXME 实际上做好判空等异常
+    int age = Integer.parseInt(request.getParameter("age"));
+    String name = request.getParameter("name");
 
-	protected void doGet(HttpServletRequest request, HttpServletResponse response)
-			throws ServletException, IOException {
-		response.getWriter().append("Served at: ").append(request.getContextPath());
-	}
+    User user = this.userService.createUser(name, age);
+    System.out.println("user create success:" + user);
 
-	protected void doPost(HttpServletRequest request, HttpServletResponse response)
-			throws ServletException, IOException {
-		doGet(request, response);
-	}
+    // 创建成功，可以返回新对象
+    // RESTFUL 的规范是返回201（body无东西），对象创建成功  201 Created.
+    // 也可以返回 204，无内容
+    response.setStatus(201);
 }
 ```
 
-可以看出，servlet 根据请求的方法（`http method`），找到对应的处理方法（`get`方法就调用`doGet`，`post`方法就调用 `doPost`）。然后从`request`里面获取数据，处理完写出到 `response`。这里没有任何处理，直接往`response`上写了一行文本而已。
+![post创建数据](image/post-1.png)
 
-- 重点知识
-  - POST/GET语义区别
-  - HTTP请求格式，每一个Header的重要（重中之重）
-  - Request/Response上的方法（重中之重）
+- 问题
+  
+`http://localhost:8080/crud` 提交成功，`http://localhost:8080/crud/` 多了一个斜杆后，提交报 `404` 错误。
 
-- 思考题
-  - 前台传递给Servlet的数据格式有哪些，Servlet如何获取到？
-  - Servlet如何返回json，浏览器如何区分？
+- 解决
 
-## 进阶
-
-我们把参数里面的 request 和 response 的 具体类名打印出来，得到结果如下：
-
-```
-class org.apache.catalina.connector.RequestFacade
-class org.apache.catalina.connector.ResponseFacade
+```xml
+<servlet-mapping>
+  <servlet-name>CrudServlet</servlet-name>
+  <url-pattern>/crud</url-pattern>
+</servlet-mapping>
 ```
 
-看名字。就知道是设计模式里面的 Facade 外观模式。看UML图：
+改为
 
-![](image/facade-0.png)
+```xml
+<servlet-mapping>
+  <servlet-name>CrudServlet</servlet-name>
+  <url-pattern>/crud/*</url-pattern>
+</servlet-mapping>
+```
 
-![](image/facade.png)
+## 改进地方
 
-而且，看类名知道是tomcat的实现类，当然在不同的serlvet容器运行的时候，实现类肯定是不一定的。
-
-## 踩坑指导
-
-我这个eclipse版本创建出来的工程，居然没有自动生成 `src\main\java` 和 `src\test\java` 目录。所以需要手动生成一下。
-
-生成的servlet的java代码，也需要移动到 `src\main\java` 目录中。
+id 应该用long类型
+考虑多个请求并发，使用线程安全的id序列和map
