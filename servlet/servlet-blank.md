@@ -1,5 +1,7 @@
 # 空白的servlet工程
 
+[代码目录](../j2ee-eclipse-projects/servlet-blank)
+
 ## 创建工程
 
 ### 新建maven工程

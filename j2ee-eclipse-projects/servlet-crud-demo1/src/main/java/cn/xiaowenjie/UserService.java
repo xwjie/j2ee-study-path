@@ -36,4 +36,8 @@ public class UserService {
     public Collection<User> queryAllUser(){
         return userMap.values();
     }
+
+    public User queryById(int id) {
+        return userMap.get(id);
+    }
 }

@@ -1,5 +1,7 @@
 # CRUD基本开发
 
+[代码目录](../j2ee-eclipse-projects/servlet-crud-demo1)
+
 ## 需求
 
 使用http对应的method实现CRUD。`Restful` 就是这样的。实际工作中不会这样用。
@@ -55,6 +57,8 @@ protected void doPost(HttpServletRequest request, HttpServletResponse response)
 }
 ```
 
+使用 `restlet` 测试
+
 ![post创建数据](image/post-1.png)
 
 - 问题
@@ -79,7 +83,19 @@ protected void doPost(HttpServletRequest request, HttpServletResponse response)
 </servlet-mapping>
 ```
 
+### 查询数据
+
+如果有带ID，查询一个用户，如果没有带ID，返回所有数据
+
+> 实际上开发中，不要这样设计接口。不要有时候返回单个，有时候返回集合。这是设计大忌。
+
+得到URL上的传入的id，看起来简单，但要考虑周全，如 `/crud`, `/crud/`, `/curd/1` , 这里就不考虑异常情况。大家可以自己写一下。
+
+
+
+
+
 ## 改进地方
 
-id 应该用long类型
-考虑多个请求并发，使用线程安全的id序列和map
+- id 应该用long类型
+- 考虑多个请求并发，使用线程安全的id序列和map
