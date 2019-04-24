@@ -1,0 +1,4 @@
+<h1>这是模板$test</h1>
+#foreach ($i in $users)
+<h2>$i.name</h2>
+#end
