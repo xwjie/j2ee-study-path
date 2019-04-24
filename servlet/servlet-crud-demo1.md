@@ -91,6 +91,98 @@ protected void doPost(HttpServletRequest request, HttpServletResponse response)
 
 得到URL上的传入的id，看起来简单，但要考虑周全，如 `/crud`, `/crud/`, `/curd/1` , 这里就不考虑异常情况。大家可以自己写一下。
 
+```java
+/**
+  * 查询数据
+  * @param request
+  * @param response
+  * @throws ServletException
+  * @throws IOException
+  */
+protected void doGet(HttpServletRequest request, HttpServletResponse response)
+        throws ServletException, IOException {
+    // 从url上获取id
+    String id = extractUrlId(request.getRequestURI());
+
+    System.out.println("get user, id:" + id);
+
+    if (id == null) {
+        Collection<User> users = this.userService.queryAllUser();
+        outPut(response, users);
+    } else {
+        User user = this.userService.queryById(Integer.parseInt(id));
+        outPut(response, user);
+    }
+}
+
+/**
+  * 输出数据
+  * @param response
+  * @param obj
+  * @throws IOException
+  */
+private void outPut(HttpServletResponse response, Object obj) throws IOException {
+    if (obj != null) {
+        // 输出格式，纯文本
+        response.getWriter().append(obj.toString());
+    }
+}
+
+/**
+  * 得到 url 后面的参数
+  *
+  * @param url
+  * @return
+  */
+public static String extractUrlId(String url) {
+    String[] params = url.split("/");
+    // System.out.println(Arrays.toString(params));
+
+    if (params.length <= 2) {
+        return null;
+    } else {
+        return params[2];
+    }
+}
+```
+
+其他的几个操作类似。
+
+
+## 返回json数据
+
+需要学习http头里面的`Content-Type`的几个取值和重要作用。
+
+主要是增加 `response.setContentType("text/json; charset=utf-8");` , 然后需要引入json工具库。我们这里使用 `fastjson` 。
+
+```java
+/**
+  * 输出数据
+  * @param response
+  * @param obj
+  * @throws IOException
+  */
+private void outPut(HttpServletResponse response, Object obj) throws IOException {
+    response.setContentType("text/json; charset=utf-8");
+
+    if (obj != null) {
+        // 输出格式，纯文本
+        response.getWriter().append( toJson(obj) ) ;
+    }
+}
+
+/**
+  * 转换为json字符串
+  * TODO: 实际上应该单独一个工具类出来
+  * @param obj
+  * @return
+  */
+private static String toJson(Object obj) {
+    return JSON.toJSONString(obj);
+}
+```
+
+## 返回试图
 
 
 
@@ -99,3 +191,11 @@ protected void doPost(HttpServletRequest request, HttpServletResponse response)
 
 - id 应该用long类型
 - 考虑多个请求并发，使用线程安全的id序列和map
+
+## 学习重点
+
+除了技术，更加重要的是学会写方法。不只是实现功能，学会写函数才是重中之重！！
+
+- 数据的获取
+- 数据的返回
+- Restful的风格

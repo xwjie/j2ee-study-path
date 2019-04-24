@@ -1,13 +1,13 @@
 package cn.xiaowenjie;
 
-import java.io.IOException;
-import java.util.Arrays;
-import java.util.Collection;
+import com.alibaba.fastjson.JSON;
 
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import java.io.IOException;
+import java.util.Collection;
 
 public class CrudServlet extends HttpServlet {
     private static final long serialVersionUID = 1L;
@@ -48,10 +48,22 @@ public class CrudServlet extends HttpServlet {
      * @throws IOException
      */
     private void outPut(HttpServletResponse response, Object obj) throws IOException {
-        if (obj == null) {
+        response.setContentType("text/json; charset=utf-8");
+
+        if (obj != null) {
             // 输出格式，纯文本
-            response.getWriter().append(obj.toString());
+            response.getWriter().append( toJson(obj) ) ;
         }
+    }
+
+    /**
+     * 转换为json字符串
+     * TODO: 实际上应该单独一个工具类出来
+     * @param obj
+     * @return
+     */
+    private static String toJson(Object obj) {
+        return JSON.toJSONString(obj);
     }
 
     /**
