@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        span,
+        div,
+        img,
+        a {
+            outline: 1px dotted;
+        }
+
+        .author,
+        .info {
+
+            /* 行内块垂直对齐 */
+            vertical-align: middle;
+            /* 让这2个元素在一行内显示 */
+            display: inline-block;
+        }
+
+        .name,
+        .email {
+            /* 2行 */
+            display: block;
+        }
+
+        /* ***************************************** */
+        /* 垂直居中 */
+        .meta2 {
+            height: 20em;
+            border: 1px solid red;
+        }
+
+        .meta2:before {
+            content: '';
+            display: inline-block;
+            vertical-align: middle;
+            height: 100%;
+            width: 10px;
+            background: yellow;
+        }
+
+        .author2,
+        .info2 {
+            /* 行内块垂直对齐 */
+            vertical-align: middle;
+            /* 让这2个元素在一行内显示 */
+            display: inline-block;
+        }
+
+        .name2,
+        .email2 {
+            /* 2行 */
+            display: block;
+        }
+    </style>
+</head>
+
+<body>
+    <h1><a id="demo1">行内块布局垂直对齐</a></h1>
+    <p class="meta">
+        <img src="avatar.png" alt="" class="author">
+        <span class="info">
+            <span class="name">
+                晓风轻
+            </span>
+            <a href="mailto:121509092@qq.com" class="email">121509092@qq.com</a>
+        </span>
+    </p>
+
+    <h1><a id="demo2">容器内垂直对齐</a></h1>
+    <p class="meta2">
+        <img src="avatar.png" alt="" class="author2">
+        <span class="info2">
+            <span class="name2">
+                晓风轻
+            </span>
+            <a href="mailto:121509092@qq.com" class="email2">121509092@qq.com</a>
+        </span>
+    </p>
+</body>
+
+</html>

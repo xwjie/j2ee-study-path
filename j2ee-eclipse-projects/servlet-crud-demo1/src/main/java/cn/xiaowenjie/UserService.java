@@ -3,8 +3,13 @@ package cn.xiaowenjie;
 import java.util.Collection;
 import java.util.LinkedHashMap;
 import java.util.Map;
+import java.util.function.Supplier;
 
 public class UserService {
+
+    class Dog{
+
+    }
 
     private Map<Integer, User> userMap = new LinkedHashMap<Integer, User>();
 

@@ -4,6 +4,8 @@
 
 可以在上一个servlet上实现，也可以单独新增一个servlet，为了方便学习，我们单独创建一个servlet。servlet的 `url mapping` 为 `/view/*`
 
+> 主要学习试图是什么，试图就是模板+数据+模板引擎=字符串（我们例子里面字符串是html格式）
+
 ## 新建servlet
 
 ```java
@@ -69,7 +71,6 @@ public class ViewUtil {
         ve.setProperty("input.encoding", "UTF-8");
         ve.setProperty("output.encoding", "UTF-8");
         ve.setProperty("webapp.resource.loader.path", "/WEB-INF/views");
-
     }
 
 
