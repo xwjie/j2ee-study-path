@@ -240,14 +240,132 @@ https://developer.mozilla.org/zh-CN/docs/Web/Guide/CSS/Understanding_z_index/The
     </p>
 ```
 
+#### 追究细节：与空白斗争到底
+
+html源代码中换行符被渲染成了空白符，如果每一个元素25%，就会导致换行。
+
+解决办法
+
+- 把元素都放到一行，不换行。
+- 把包含元素的font-size设置为0（从而让空格的宽度为0）
+
+### 使用表格显示属性实现布局
 
 
 
+```css
+.navbar ul{
+    display: table;
+    table-layout: fixed;   
+}
+
+.navbar li{
+    width: 25%;
+    display: table-cell;
+}
+
+```
+
+见 [demo.html](/css/demo.html)
+
+#### 表格单元中的垂直居中
+
+给table-cell中的元素应用 vertical-align: middle 即可。
+
+## Flexbox
+
+> 关键点：学会 margin：auto 的作用。
+
+### 方向：主轴（水平）和副轴（垂直）
+
+### 嵌套的Flexbox布局
+
+使用margin auto自动计算空间。
+
+还使用了 order：-1调整元素显示顺序。
+
+左右2个div元素高度会自动撑起来，所以他们高度相等。给子容器增加flex属性，让最后一个元素margin-top：auto即可。这样左右2个子容器的元素就会左右对称起来。见 [flex.html](/css/flex.html)
 
 
+## 二维/三维变换
+
+tranform
+
+## 过渡
+
+transition
+
+## css动画
+
+animation
+
+## css shapes
+
+shape-outside 只能作用给浮动元素，环形环绕等。
+
+[mdn](https://developer.mozilla.org/zh-CN/docs/Web/CSS/shape-outside)
+
+```css
+/* 关键字值 */
+shape-outside: none;
+shape-outside: margin-box;
+shape-outside: content-box;
+shape-outside: border-box;
+shape-outside: padding-box;
+
+/* 函数值 */
+shape-outside: circle();
+shape-outside: ellipse();
+shape-outside: inset(10px 10px 10px 10px);
+shape-outside: polygon(10px 10px, 20px 20px, 30px 30px);
+
+/* <url> 值 */
+shape-outside: url(image.png);
+
+/* 渐变值 */
+shape-outside: linear-gradient(45deg, rgba(255, 255, 255, 0) 150px, red 150px);
+
+/* 全局值 */
+shape-outside: initial;
+shape-outside: inherit;
+shape-outside: unset;
+```
+
+- [shape-outside实现文字环绕图片圆弧形排列效果](https://blog.csdn.net/qq_32584661/article/details/80048175)
+- [借助CSS Shapes实现元素滚动自动环绕iPhone X的刘海](https://www.zhangxinxu.com/wordpress/2017/09/css-shapes-outside-iphone-x-head/)
 
 
+```css
+shape-outside: circle();
+shape-margin: 1em;
+```
+
+## 剪切 clip-path 
+
+clip-path CSS 属性可以创建一个只有元素的部分区域可以显示的剪切区域。区域内的部分显示，区域外的隐藏。剪切区域是被引用内嵌的URL定义的路径或者外部svg的路径，或者作为一个形状例如circle().。clip-path属性代替了现在已经弃用的剪切 clip属性。
+
+各种形状的图片。[聊聊clip-path](https://blog.csdn.net/Jizhen_Tan/article/details/52496400)
+
+[mdn](https://developer.mozilla.org/zh-CN/docs/Web/CSS/clip-path)
 
 
+## 蒙版 mask-image
+
+mask-image, mask-size
+
+## 滤镜
+
+filter
+
+
+## 浏览器如何解析css
+
+> 学会chrome性能工具使用，理解那些会引起 回流与重绘（Reflow & Repaint）
+
+- [浏览器如何解析css](https://zhuanlan.zhihu.com/p/61015908)
+- [浏览器css解析的两种模式](https://www.cnblogs.com/danranysy/p/4744760.html)
+- [浏览器渲染原理|绘制|展现|解析|如何工作 - bambooleaf - CSDN博客](https://blog.csdn.net/goodzyw/article/details/46550447)
+- [如何减少HTML页面回流与重绘（Reflow & Repaint）](https://zhuanlan.zhihu.com/p/22181897) [前端性能优化：细说浏览器渲染的重排与重绘](https://www.imooc.com/article/45936)
+- [使用CSS3 will-change提高页面滚动、动画等渲染性能](https://www.zhangxinxu.com/wordpress/2015/11/css3-will-change-improve-paint/)
 
 

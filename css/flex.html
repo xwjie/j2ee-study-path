@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        div{
+            outline: 1px solid;
+            margin: 10px;
+            padding: 10px;
+        }
+        .main{
+            display: flex;
+        }
+
+        .sub{
+            flex: 1;
+            flex-direction:column;
+            display: flex;
+        }
+
+        .title{
+            font-weight: bold;
+            order: -1;
+        }
+
+        .conver{
+            height: 200px;
+            border: 2px solid;
+        }
+
+        .action{
+            background-color: greenyellow;
+            border-radius: 10px;
+            margin-top: auto;
+        }
+    
+    </style>
+</head>
+<body>
+    <h3>
+            左右2个div元素高度会自动撑起来，所以他们高度相等。
+            给子容器增加flex属性，让最后一个元素margin-top：auto即可。
+            这样左右2个子容器的元素就会左右对称起来。
+    </h3>
+    <div class="main">
+        <div class="sub">
+            <div class="conver"></div>
+            <div class="title">这是标题，使用order：-1第一个出现</div>
+            <div class="txt">
+                这里左右2段文本可能有长有段，长的让他全部显示，并且只有2边需要对其显示。
+                但是txt这个div的高度是不固定的，是自动伸缩的！<br/>
+                这里左右2段文本可能有长有段，长的让他全部显示，并且只有2边需要对其显示。
+                但是txt这个div的高度是不固定的，是自动伸缩的！<br/>
+                这里左右2段文本可能有长有段，长的让他全部显示，并且只有2边需要对其显示。
+                但是txt这个div的高度是不固定的，是自动伸缩的！<br/>
+            </div>
+            <div class="action">
+                这个是操作按钮
+            </div>
+        </div>
+        <div class="sub">
+                <div class="conver"></div>
+                <div class="title">这是标题，使用order：-1第一个出现</div>
+                <div class="txt">
+                    这里的文本就比较短啦<br/>
+                </div>
+                <div class="action">
+                    这个是操作按钮
+                </div>
+        </div>
+    </div>
+</body>
+</html>
