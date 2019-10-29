@@ -369,3 +369,40 @@ filter
 - [使用CSS3 will-change提高页面滚动、动画等渲染性能](https://www.zhangxinxu.com/wordpress/2015/11/css3-will-change-improve-paint/)
 
 
+## nightwatch 进行 E2E(end to end)测试
+
+Nightwatch.js 是一个用来测试web应用和网站的自动化测试框架，它是由NodeJs编写的，使用了W3C WebDriver API(之前是Selenium WebDriver)
+
+它是完全的浏览器(end-to-end)测试方案，旨在简化搭建持续集成和编写自动话测试的过程。它也同样可以用来写NodeJs的单元测试。
+
+https://blog.csdn.net/qq_25324335/article/details/81990022
+
+- 京东使用 [京东 PC 首页 2019 改版前端总结](https://juejin.im/post/5d71c98a6fb9a06ae8362f52)
+
+## 骨架屏
+
+https://juejin.im/post/5b79a2786fb9a01a18267362
+
+- 手写HTML、CSS的方式为目标页定制骨架屏
+  
+做法可以参考<Vue页面骨架屏注入实践>，主要思路就是使用 vue-server-renderer 这个本来用于服务端渲染的插件，用来把我们写的.vue文件处理为HTML，插入到页面模板的挂载点中，完成骨架屏的注入。这种方式不甚文明，如果页面样式改变了，还得改一遍骨架屏，增加了维护成本。
+骨架屏的样式实现参考 CodePen
+
+- 使用图片作为骨架屏；
+  
+简单暴力，让UI同学花点功夫吧哈哈；小米商城的移动端页面采用的就是这个方法，它是使用了一个Base64的图片来作为骨架屏。
+
+- 自动生成并自动插入静态骨架屏
+  
+这种方法跟第一种方法类似，不过是自动生成骨架屏，可以关注下饿了么开源的插件 page-skeleton-webpack-plugin ，它根据项目中不同的路由页面生成相应的骨架屏页面，并将骨架屏页面通过 webpack 打包到对应的静态路由页面中，不过要注意的是这个插件目前只支持history方式的路由，不支持hash方式，且目前只支持首页的骨架屏，并没有组件级的局部骨架屏实现，作者说以后会有计划实现(issue9)。
+
+## requestAnimationFrame + DocumentFragment
+
+https://newbyvector.github.io/2018/05/01/2015-05-01/
+
+[「前端进阶」高性能渲染十万条数据(时间分片)](https://juejin.im/post/5d76f469f265da039a28aff7)
+
+与setTimeout相比，requestAnimationFrame 最大的优势是**由系统来决定回调函数的执行时机**。
+
+如果屏幕刷新率是60Hz,那么回调函数就每16.7ms被执行一次，如果刷新率是75Hz，那么这个时间间隔就变成了1000/75=13.3ms，换句话说就是，requestAnimationFrame的步伐跟着系统的刷新步伐走。它能保证回调函数在屏幕每一次的刷新间隔中只被执行一次，这样就**不会引起丢帧现象**。
+
