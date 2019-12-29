@@ -158,6 +158,9 @@
   - springboot框架使用
 - 高级
   - 参考我的代码框架
+  - 编写一个权限注解的AOP
+    - 用上SPEL
+
 
 ## 网页开发
 
@@ -241,6 +244,10 @@
 - 中级
   - 重点的几种设计模式在实际中的应用
   - spring的设计模式 
+  - Class.forName / SPI / IoC
+    - [JAVA基础|从Class.forName初始化数据库到SPI破坏双亲委托机制](https://www.cnblogs.com/faberry/p/10594002.html)
+    - [深入理解 Java 中 SPI 机制](http://blog.itpub.net/69912579/viewspace-2656555/)
+    - [Dubbo SPI机制详解](https://www.jianshu.com/p/a72856c77b6a)
 
 ## 函数式编程
 

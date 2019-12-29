@@ -10,13 +10,43 @@
   	<description></description>
   	<servlet-class>cn.xiaowenjie.CrudServlet</servlet-class>
   </servlet>
+  <servlet>
+  	<servlet-name>FirstServlet</servlet-name>
+  	<display-name>FirstServlet</display-name>
+  	<description>返回文本</description>
+  	<servlet-class>cn.xiaowenjie.FirstServlet</servlet-class>
+  </servlet>
+  <servlet>
+  	<servlet-name>JsonServlet</servlet-name>
+  	<display-name>JsonServlet</display-name>
+  	<description></description>
+  	<servlet-class>cn.xiaowenjie.JsonServlet</servlet-class>
+  </servlet>
+  <servlet>
+  	<servlet-name>JspServlet</servlet-name>
+  	<display-name>JspServlet</display-name>
+  	<description></description>
+  	<servlet-class>cn.xiaowenjie.JspServlet</servlet-class>
+  </servlet>
   <servlet-mapping>
   	<servlet-name>CrudServlet</servlet-name>
   	<url-pattern>/crud</url-pattern>
   </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>FirstServlet</servlet-name>
+  	<url-pattern>/FirstServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>JsonServlet</servlet-name>
+  	<url-pattern>/JsonServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>JspServlet</servlet-name>
+  	<url-pattern>/JspServlet</url-pattern>
+  </servlet-mapping>
   
   <!-- 默认到我们的servlet -->
   <welcome-file-list>
- 	<welcome-file>crud</welcome-file> 
+ 	<welcome-file>index.jsp</welcome-file> 
   </welcome-file-list>
 </web-app>
