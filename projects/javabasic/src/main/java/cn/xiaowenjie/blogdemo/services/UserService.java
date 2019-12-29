@@ -41,7 +41,7 @@ public class UserService {
     public User login(String name, String password){
         Check.notEmpty(name);
         Check.notEmpty(password);
-        
+
         User user = dao.queryByName(name);
 
         if(user == null){

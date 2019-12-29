@@ -5,13 +5,14 @@ import cn.xiaowenjie.blogdemo.beans.Blog;
 import java.util.Collection;
 import java.util.HashMap;
 import java.util.Map;
+import java.util.TreeMap;
 import java.util.concurrent.atomic.AtomicLong;
 
 public class BlogDao {
 
     private final static  BlogDao instance = new BlogDao();
 
-    private final static Map<Long, Blog> blogs = new HashMap<>();
+    private final static Map<Long, Blog> blogs = new TreeMap<>();
 
     private final static AtomicLong idSeq = new AtomicLong(100L);
 

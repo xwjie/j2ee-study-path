@@ -4,6 +4,7 @@ import cn.xiaowenjie.blogdemo.beans.User;
 
 import java.util.HashMap;
 import java.util.Map;
+import java.util.TreeMap;
 import java.util.concurrent.atomic.AtomicLong;
 import java.util.concurrent.atomic.AtomicLongArray;
 
@@ -11,7 +12,7 @@ public class UserDao {
 
     private final static UserDao instance = new UserDao();
 
-    private final static Map<Long, User> users = new HashMap<>();
+    private final static Map<Long, User> users = new TreeMap<>();
 
     private final static AtomicLong idSeq = new AtomicLong(100L);
 
