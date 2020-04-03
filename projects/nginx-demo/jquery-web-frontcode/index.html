@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <link rel="stylesheet" href="css/tacit-css.min.css">
+  <script src='js/jquery-1.11.0.js' type='text/javascript'></script>
+</head>
+
+<body>
+  <div class="container">
+    <table>
+      <thead>
+        <th>ID</th>
+        <th>Title</th>
+        <th>操作</th>
+      </thead>
+      <tbody id="blogMain">
+
+      </tbody>
+    </table>
+  </div>
+
+  <script>
+    function deleteBlog(id) {
+      console.log("delete blog", id);
+
+      $.post("/blog/delete", { id: id },
+        function (res) {
+          console.log("结果:" + res.data);
+
+          if (res.data) {
+            $("#blog-" + id).remove();
+          }
+        });
+    }
+
+
+    $(document).ready(function () {
+      $.getJSON("/blog/list").then(res => {
+        console.log("blogs", res);
+        var blogStr = res.data.map(blog => `
+          <tr id="blog-${blog.id}">
+            <td>${blog.id}</td>
+            <td>${blog.title}</td>
+            <td>
+              <a href="/edit.html?id=${blog.id}">编辑</a>
+              <a href="/view.html?id=${blog.id}">浏览</a>
+              <a href="#" onclick="javacript:deleteBlog(${blog.id})">删除</a>
+            </td>
+          </tr>
+        `).concat("");
+
+        console.log(blogStr);
+        $("#blogMain").html(blogStr);
+      });
+    });
+  </script>
+</body>
+
+</html>

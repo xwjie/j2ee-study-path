@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <link rel="stylesheet" href="css/tacit-css.min.css">
+  <script src='js/jquery-1.11.0.js' type='text/javascript'></script>
+  <script src="js/tools.js"></script>
+</head>
+
+<body>
+  <div id="blogMain">
+    
+  </div>
+
+  <script>
+
+
+    $(document).ready(function () {
+      $.get("/blog/view", { id: $.getUrlParam("id")}).then(res => {
+        console.log("blogs", res);
+        var blog = res.data;
+
+        var blogStr = `
+            <h1>${blog.title}</h1>
+            <div>${blog.body}</div>
+        `;
+
+        console.log(blogStr);
+        $("#blogMain").html(blogStr);
+      });
+    });
+  </script>
+</body>
+
+</html>
