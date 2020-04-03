@@ -1,6 +1,7 @@
 # nginx 学习demo
 
 
+## 启动springboot
 
 ## 配置hosts
 
@@ -17,5 +18,11 @@
 ## 启动nginx
 
 双击 `nginx-1.16.1\nginx.exe`
+
+
+## 测试
+
+访问 http://a.com/
+
 
 
