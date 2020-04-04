@@ -17,11 +17,8 @@
   </div>
 
   <script>
-
-
-    $(document).ready(function () {
-      $.get("/blog/view", { id: $.getUrlParam("id")}).then(res => {
-        console.log("blogs", res);
+    function fetchBlog(id) {
+      $.get("/blog/view", { id: id}).then(res => {
         var blog = res.data;
 
         var blogStr = `
@@ -32,6 +29,10 @@
         console.log(blogStr);
         $("#blogMain").html(blogStr);
       });
+    }
+
+    $(document).ready(function () {
+      fetchBlog($.getUrlParam("id"));
     });
   </script>
 </body>

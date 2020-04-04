@@ -3,7 +3,6 @@ package cn.xiaowenjie.demo.controllers;
 import cn.xiaowenjie.demo.beans.Blog;
 import cn.xiaowenjie.demo.beans.ResultBean;
 import cn.xiaowenjie.demo.services.BlogService;
-import com.sun.org.apache.xpath.internal.operations.Bool;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -12,6 +11,10 @@ import org.springframework.web.bind.annotation.RestController;
 
 import java.util.List;
 
+/**
+ * blog crud
+ * @author 晓风轻
+ */
 @RestController
 @RequestMapping("/blog")
 public class BlogController {
@@ -21,7 +24,7 @@ public class BlogController {
 
     @GetMapping("/list")
     public ResultBean<List<Blog>> list() {
-        return new ResultBean<List<Blog>>(blogService.allBLogs());
+        return new ResultBean<List<Blog>>(blogService.allBlog());
     }
 
     @GetMapping("/view")

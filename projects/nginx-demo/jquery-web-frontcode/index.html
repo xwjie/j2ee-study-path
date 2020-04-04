@@ -22,6 +22,8 @@
 
       </tbody>
     </table>
+    <br/>
+    <button onclick="fetchData()">刷新</button>
   </div>
 
   <script>
@@ -39,7 +41,7 @@
     }
 
 
-    $(document).ready(function () {
+    function fetchData(){
       $.getJSON("/blog/list").then(res => {
         console.log("blogs", res);
         var blogStr = res.data.map(blog => `
@@ -57,6 +59,10 @@
         console.log(blogStr);
         $("#blogMain").html(blogStr);
       });
+    }
+
+    $(document).ready(function () {
+      fetchData();
     });
   </script>
 </body>
