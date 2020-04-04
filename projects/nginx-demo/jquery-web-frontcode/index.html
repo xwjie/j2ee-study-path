@@ -23,7 +23,8 @@
       </tbody>
     </table>
     <br/>
-    <button onclick="fetchData()">刷新</button>
+    <a href="###" onclick="fetchData()">刷新</a>
+    <a href="edit.html">新增</a>
   </div>
 
   <script>
@@ -49,8 +50,8 @@
             <td>${blog.id}</td>
             <td>${blog.title}</td>
             <td>
-              <a href="/edit.html?id=${blog.id}">编辑</a>
-              <a href="/view.html?id=${blog.id}">浏览</a>
+              <a href="edit.html?id=${blog.id}">编辑</a>
+              <a href="view.html?id=${blog.id}">浏览</a>
               <a href="#" onclick="javacript:deleteBlog(${blog.id})">删除</a>
             </td>
           </tr>

@@ -13,13 +13,13 @@
 
 <body>
   <form id="form1">
-    <input type="hidden" name="id" id="id" />
+    <input type="hidden" name="id" id="id" value="0"/>
     <label for="title">标题</label><br />
-    <input type="text" name="title" id="title" />
-    <hr />
+    <input type="text" name="title" id="title" size="120"/>
+    <br />
     <label for="body">正文</label><br />
-    <textarea name="body" id="body"></textarea>
-    <hr />
+    <textarea name="body" id="body" cols="120" rows="10"></textarea>
+    <br />
     <button type="submit">保存</button>
   </form>
 
@@ -35,14 +35,20 @@
     }
 
     $(document).ready(function () {
-      fetchBlog($.getUrlParam("id"));
+      var id = $.getUrlParam("id")
+      id && fetchBlog(id);
     });
 
     $('#form1').submit(function () {
       console.log($(this).serialize());
-      $.post("/blog/update", $(this).serialize(),
+      var id = $.getUrlParam("id")
+      
+      // 判断是新增还是修改
+      var url = id ? "/blog/update" : "/blog/add";
+      
+      $.post(url, $(this).serialize(),
         function (res) {
-          alert("更新结果:" + res.data);
+          alert("新增/更新结果:" + res.data);
         });
       return false;
     });

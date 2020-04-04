@@ -19,6 +19,7 @@
   <script>
     function fetchBlog(id) {
       $.get("/blog/view", { id: id}).then(res => {
+
         var blog = res.data;
 
         var blogStr = `

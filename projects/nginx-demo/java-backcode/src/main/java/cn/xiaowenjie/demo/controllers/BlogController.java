@@ -9,6 +9,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import java.util.Collection;
 import java.util.List;
 
 /**
@@ -23,8 +24,8 @@ public class BlogController {
     BlogService blogService;
 
     @GetMapping("/list")
-    public ResultBean<List<Blog>> list() {
-        return new ResultBean<List<Blog>>(blogService.allBlog());
+    public ResultBean<Collection<Blog>> list() {
+        return new ResultBean<Collection<Blog>>(blogService.allBlog());
     }
 
     @GetMapping("/view")
@@ -32,10 +33,18 @@ public class BlogController {
         return new ResultBean<Blog>(blogService.getById(id));
     }
 
+    @PostMapping("/add")
+    public ResultBean<Long> add(Blog blog) {
+        System.out.println("update:" + blog);
+        long newId = blogService.add(blog);
+        System.out.println("update newId:" + newId);
+        return new ResultBean<>(newId);
+    }
+
     @PostMapping("/update")
     public ResultBean<Boolean> update(Blog blog) {
         System.out.println("update:" + blog);
-
+        blogService.update(blog);
         return new ResultBean<>(true);
     }
 
