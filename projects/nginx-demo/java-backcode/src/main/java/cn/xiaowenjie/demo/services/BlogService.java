@@ -21,10 +21,11 @@ public class BlogService {
     private static final ConcurrentHashMap<Long, Blog> blogs = new ConcurrentHashMap<>();
 
     public Collection<Blog> allBlog() {
-        if(blogs.isEmpty()){
-            return createTestData();
-        }
         // 随机产生
+        if (blogs.isEmpty()) {
+            createTestData();
+        }
+
         return blogs.values();
     }
 
@@ -32,8 +33,20 @@ public class BlogService {
      * 测试数据
      * @return
      */
-    private List<Blog> createTestData() {
-        return IntStream.range(100, 110).mapToObj(index -> new Blog(blogId.incrementAndGet(), "Title " + index, "Body " + index)).collect(Collectors.toList());
+//    private List<Blog> createTestData() {
+//        return IntStream.range(100, 110).mapToObj(index -> new Blog(blogId.incrementAndGet(), "Title " + index, "Body " + index)).collect(Collectors.toList());
+//    }
+
+    /**
+     * 测试数据
+     *
+     * @return
+     */
+    private void createTestData() {
+        for (int i = 0; i < 5; i++) {
+            Blog blog = new Blog(blogId.incrementAndGet(), "Title " + i, "Body " + i);
+            blogs.put(blog.getId(), blog);
+        }
     }
 
     public Blog getById(long id) {
@@ -46,8 +59,10 @@ public class BlogService {
 
     public long add(Blog blog) {
         long newId = blogId.incrementAndGet();
+
         blog.setId(newId);
         blogs.put(newId, blog);
+
         return newId;
     }
 }

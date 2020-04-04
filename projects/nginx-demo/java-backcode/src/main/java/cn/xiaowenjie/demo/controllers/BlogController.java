@@ -35,9 +35,9 @@ public class BlogController {
 
     @PostMapping("/add")
     public ResultBean<Long> add(Blog blog) {
-        System.out.println("update:" + blog);
+        System.out.println("add:" + blog);
         long newId = blogService.add(blog);
-        System.out.println("update newId:" + newId);
+        System.out.println("add newId:" + newId);
         return new ResultBean<>(newId);
     }
 
