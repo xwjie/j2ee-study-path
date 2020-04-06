@@ -1,5 +1,6 @@
 # nginx 学习demo
 
+使用 nginx 前后台分离部署的demo，非常重要。初学者建议代码看几遍然后写出来，要求代码要能背出来。
 
 ## 启动springboot
 

@@ -21,6 +21,7 @@ public class MyLinkedList<E> implements IList<E> {
         super();
     }
 
+    @Override
     public void add(E... e) {
         if (e == null) {
             doAdd(null);
@@ -48,6 +49,7 @@ public class MyLinkedList<E> implements IList<E> {
         this.size++;
     }
 
+    @Override
     public E remove(E e) {
         if (this.head == null) {
             return null;
@@ -90,6 +92,7 @@ public class MyLinkedList<E> implements IList<E> {
         return value.equals(e);
     }
 
+    @Override
     public int size() {
         return this.size;
     }

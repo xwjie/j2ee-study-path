@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <link rel="stylesheet" href="css/tacit-css.min.css">
+  <script src='js/vue.js' type='text/javascript'></script>
+  <script src="js/axois.js"></script>
+</head>
+
+<body>
+  <div id="app">
+    <table>
+      <thead>
+        <th>ID</th>
+        <th>Title</th>
+        <th>操作</th>
+      </thead>
+      <tbody>
+        <tr v-for="(blog, index) in blogs">
+          <td>{{blog.id}}</td>
+          <td>{{blog.title}}</td>
+          <td>
+            <a :href="'edit.html?id=' + blog.id">编辑</a>
+            <a :href="'view.html?id=' + blog.id">浏览</a>
+            <a href="#" v-on:click="deleteBlog(blog.id)">删除</a>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+    <br />
+    <a href="###" v-on:click="fetchData">刷新</a>
+    <a href="edit.html">新增</a>
+  </div>
+
+  <script>
+    var app = new Vue({
+      el: '#app',
+      data: {
+        blogs: []
+      },
+      mounted() {
+        this.fetchData();
+      },
+      methods: {
+        fetchData() {
+          // 和jquery不同，res是http响应报文
+          axios.get("/blog/list").then(res => res.data).then(res => {
+            console.log("blogs", res);
+            this.blogs = res.data;
+          });
+        },
+        deleteBlog(id) {
+          console.log("delete blog", id);
+
+          // 参数提交和jquery不同
+          axios.post("/blog/delete?id=" + id).then(res => res.data).then(res => {
+
+            console.log("结果:" + res.data);
+
+            if (res.data) {
+              // remove from array
+              this.blogs.splice(this.blogs.findIndex(item => item.id === id), 1)
+            }
+          });
+        }
+      },
+    })
+  </script>
+</body>
+
+</html>
