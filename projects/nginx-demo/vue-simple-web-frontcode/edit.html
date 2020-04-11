@@ -6,7 +6,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Document</title>
-  <link rel="stylesheet" href="css/tacit-css.min.css">
+  <link rel="stylesheet" href="css/bulma.css">
+  <link rel="stylesheet" href="css/public.css">
   <script src='js/vue.js' type='text/javascript'></script>
   <script src="js/axois.js"></script>
   <script src="js/tools.js"></script>
@@ -16,13 +17,27 @@
   <div id="app">
     <form @submit.prevent="submit">
       <input type="hidden" name="id" :value="blog.id" />
-      <label for="title">标题</label><br />
-      <input type="text" name="title" size="120" :value="blog.title" />
+
+      <div class="field">
+        <label class="label" for="title">标题</label>
+        <div class="control">
+          <input class="input" type="text" name="title" size="120" :value="blog.title" />
+        </div>
+      </div>
+
+
       <br />
-      <label for="body">正文</label><br />
-      <textarea name="body" id="body" cols="120" rows="10" :value="blog.body"></textarea>
+
+      <div class="field">
+        <label class="label" for="body">正文</label>
+        <div class="control">
+          <textarea class="textarea" name="body" cols="120" rows="10" :value="blog.body"></textarea>
+        </div>
+      </div>
+
+
       <br />
-      <button type="submit">保存</button>
+      <button class="button is-info" type="submit">保存</button>
     </form>
   </div>
 
