@@ -4,10 +4,7 @@ import cn.xiaowenjie.demo.beans.Blog;
 import cn.xiaowenjie.demo.beans.ResultBean;
 import cn.xiaowenjie.demo.services.BlogService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.Collection;
 import java.util.List;
@@ -35,14 +32,24 @@ public class BlogController {
 
     @PostMapping("/add")
     public ResultBean<Long> add(Blog blog) {
+        return this.addJson(blog);
+    }
+
+    @PostMapping("/update")
+    public ResultBean<Boolean> update(Blog blog) {
+        return this.updateJson(blog);
+    }
+
+    @PostMapping("/addJson")
+    public ResultBean<Long> addJson(@RequestBody Blog blog) {
         System.out.println("add:" + blog);
         long newId = blogService.add(blog);
         System.out.println("add newId:" + newId);
         return new ResultBean<>(newId);
     }
 
-    @PostMapping("/update")
-    public ResultBean<Boolean> update(Blog blog) {
+    @PostMapping("/updateJson")
+    public ResultBean<Boolean> updateJson(@RequestBody Blog blog) {
         System.out.println("update:" + blog);
         blogService.update(blog);
         return new ResultBean<>(true);
@@ -51,7 +58,6 @@ public class BlogController {
     @PostMapping("/delete")
     public ResultBean<Boolean> deleteBlog(long id) {
         System.out.println("delete:" + id);
-
-        return new ResultBean<>(true);
+        return new ResultBean<>(blogService.delete(id) != null);
     }
 }

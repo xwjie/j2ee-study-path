@@ -7,51 +7,63 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Document</title>
   <link rel="stylesheet" href="css/tacit-css.min.css">
-  <script src='js/jquery-1.11.0.js' type='text/javascript'></script>
+  <script src='js/vue.js' type='text/javascript'></script>
+  <script src="js/axois.js"></script>
   <script src="js/tools.js"></script>
 </head>
 
 <body>
-  <form id="form1">
-    <input type="hidden" name="id" id="id" value="0"/>
-    <label for="title">标题</label><br />
-    <input type="text" name="title" id="title" size="120"/>
-    <br />
-    <label for="body">正文</label><br />
-    <textarea name="body" id="body" cols="120" rows="10"></textarea>
-    <br />
-    <button type="submit">保存</button>
-  </form>
+  <div id="app">
+    <form @submit.prevent="submit">
+      <input type="hidden" name="id" :value="blog.id" />
+      <label for="title">标题</label><br />
+      <input type="text" name="title" size="120" :value="blog.title" />
+      <br />
+      <label for="body">正文</label><br />
+      <textarea name="body" id="body" cols="120" rows="10" :value="blog.body"></textarea>
+      <br />
+      <button type="submit">保存</button>
+    </form>
+  </div>
+
 
   <script>
-    function fetchBlog(id) {
-      $.get("/blog/view", { id: id }).then(res => {
-        var blog = res.data;
+    var app = new Vue({
+      el: '#app',
+      data: {
+        blog: {
+          id: 0,
+          title: '',
+          body: ''
+        }
+      },
+      mounted() {
+        var id = getUrlParam("id")
+        id && this.fetchBlog(id);
+      },
+      methods: {
+        fetchBlog(id) {
+          // 和jquery不同，res是http响应报文
+          axios.get(`/blog/view?id=${id}`).then(res => res.data).then(res => {
+            console.log("blog", res);
+            this.blog = res.data;
+          });
+        },
+        submit() {
+          var id = getUrlParam("id")
 
-        $("#id").val(blog.id);
-        $("#title").val(blog.title);
-        $("#body").val(blog.body);
-      });
-    }
+          // 判断是新增还是修改
+          var url = id ? "/blog/updateJson" : "/blog/addJson";
 
-    $(document).ready(function () {
-      var id = $.getUrlParam("id")
-      id && fetchBlog(id);
-    });
-
-    $('#form1').submit(function () {
-      console.log($(this).serialize());
-      var id = $.getUrlParam("id")
-      
-      // 判断是新增还是修改
-      var url = id ? "/blog/update" : "/blog/add";
-      
-      $.post(url, $(this).serialize(),
-        function (res) {
-          alert("新增/更新结果:" + res.data);
-        });
-      return false;
-    });
+          // 参数提交和jquery不同
+          // 和jquery不同，res是http响应报文
+          axios.post(url, this.blog).then(res => res.data).then(res => {
+            alert("新增/更新结果:" + res.data);
+            //
+          });
+        }
+      }
+    })
   </script>
 </body>
 
